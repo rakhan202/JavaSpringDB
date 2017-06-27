@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="p1" class="Person">
+		<constructor-arg value="Omar Malik" name="name"></constructor-arg>
+		<constructor-arg value="22" name="age"></constructor-arg>
+		<constructor-arg value="brown" name="eyeColor"></constructor-arg>
+		<constructor-arg value="5.5" name="height"></constructor-arg>
+		<constructor-arg name="address" ref="add1"></constructor-arg>
+	</bean>
+	<bean id="p2" class="Person">
+		<constructor-arg value="Haroon Malik" name="name"></constructor-arg>
+		<constructor-arg value="25" name="age"></constructor-arg>
+		<constructor-arg value="black" name="eyeColor"></constructor-arg>
+		<constructor-arg value="5.5" name="height"></constructor-arg>
+	</bean>
+	<bean id="p3" class="Person">
+		<constructor-arg value="Ron Carter" name="name"></constructor-arg>
+		<constructor-arg value="23" name="age"></constructor-arg>
+		<constructor-arg value="blue" name="eyeColor"></constructor-arg>
+		<constructor-arg value="5.6" name="height"></constructor-arg>
+	</bean>
+	<bean id="p4" class="Person">
+		<constructor-arg value="Mike Anderson" name="name"></constructor-arg>
+		<constructor-arg value="25" name="age"></constructor-arg>
+		<constructor-arg value="blue" name="eyeColor"></constructor-arg>
+		<constructor-arg value="5.5" name="height"></constructor-arg>
+		<constructor-arg name="address" ref="add1"></constructor-arg>
+	</bean>
+
+
+
+
+
+
+	<bean id="add1" class="Address">
+		<constructor-arg name="state" value="MI"></constructor-arg>
+		<constructor-arg name="zipCode" value="48098"></constructor-arg>
+		<constructor-arg name="house" value="12345"></constructor-arg>
+		<constructor-arg name="street" value="Heavenly Lane"></constructor-arg>
+		<constructor-arg name="city" value="Warren"></constructor-arg>
+	</bean>
+</beans>
+
